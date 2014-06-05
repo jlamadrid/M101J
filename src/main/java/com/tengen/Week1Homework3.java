@@ -40,7 +40,8 @@ public class Week1Homework3 {
                 collection.aggregate(
                         new BasicDBObject("$group",
                                 new BasicDBObject("_id", "$value")
-                                        .append("count", new BasicDBObject("$sum", 1)))
+                                        .append("count", new BasicDBObject("$sum", 1))
+                        )
                         ,
                         new BasicDBObject("$match", new BasicDBObject("count",
                                 new BasicDBObject("$gt", 2))),
